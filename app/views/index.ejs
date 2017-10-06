@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AUSTERIDADE</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1 align="center">Lista de Jogos Gratuitos na Steam</h1>
+    <% body.forEach(function(body) { %>
+    <a href="<%= body.link %>" target="_blank">
+        <img src="<%= body.img %>" alt="<%= body.title %>" /><br/>
+        <h3><%= body.title %></h3>
+    </a>
+    <% }); %>
+  </body>
+</html>
