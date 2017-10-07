@@ -1,16 +1,67 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>AUSTERIDADE</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1 align="center">Lista de Jogos Gratuitos na Steam</h1>
-    <% body.forEach(function(body) { %>
-    <a href="<%= body.link %>" target="_blank">
-        <img src="<%= body.img %>" alt="<%= body.title %>" /><br/>
-        <h3><%= body.title %></h3>
-    </a>
-    <% }); %>
-  </body>
-</html>
+<% include partials/head.ejs %>
+
+<!-- Banner start -->
+<div id="home"></div>
+<section id="banner" class="root-sec brand-bg padd-tb-55 single-banner blogpage-banner-wrap">
+    <div class="container" style="margin-top: 8%">
+        <div class="row">
+            <div class="clearfix blog-banner-text blog-single-banner">
+                <div class="col-md-12">
+                    <h3 class="title">AUSTERIDADE</h3>
+                    <ul class="clearfix blog-post-meta">
+                        <li>
+                            <p>Indexador de jogos gratuitos para sobreviver à crise.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- ./Banner end -->
+
+<!-- Serviços Section end -->
+<section id="servicos" class="scroll-section root-sec grey lighten-5 padd-tb-120 blog-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="blog-inner">
+                <div class="col-sm-12 card-box-wrap">
+                    <div class="row">
+                        <div class="clearfix card-element-wrapper" id="blog-posts">
+                            <% body.forEach(function(body) { %>
+                                <% if (body.title) { %>
+                            <a href="<%= body.link %>" target="_blank">
+                                <article class="col-sm-6 col-md-4 single-card-box single-post">
+                                    <div class="card wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration=".7s">
+                                        <div class="card-img-wrap">
+                                            <div class="blog-post-thumb waves-effect waves-block waves-light"
+                                                 align="center">
+                                                <img class="activator" src="<%= body.img ? body.img : '/images/temer.jpg' %>" alt="<%= body.title %>"
+                                                     style="max-height: 300px">
+                                            </div>
+                                            <div class="post-body">
+                                                <h2 class="post-title post-title-link brand-text"><%= body.title %></h2>
+                                                <!--<p class="post-content">Oferecemos soluções disponíveis para todo o tipo de banheiro. Tudo para você não passar aperto na hora do banho.</p>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article> <!-- ./single blog post end -->
+                            </a>
+                                <% } %>
+                            <% }); %>
+                        </div>
+                        <div class="clearfix left-align">
+                            <div class="col-sm-12">
+                                <a href="https://github.com/Kidoncio/austeridade/issues" class="waves-effect waves-light btn-large load-more" target="_blank">
+                                    Contribua você também!
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- ./container -->
+</section>
+<!-- #Serviços Section end -->
+
+<% include partials/footer.ejs %>

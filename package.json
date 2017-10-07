@@ -2,7 +2,7 @@
   "name": "austeridade",
   "version": "0.0.0",
   "private": true,
-  "author": "Lucas do Nascimento",
+  "author": "Lucas do Nascimento - @Kidoncio",
   "scripts": {
     "start": "nodemon ./app/config/www && nodemon app.js"
   },
@@ -16,6 +16,7 @@
     "morgan": "~1.9.0",
     "nodemon": "^1.12.1",
     "request": "^2.83.0",
+    "request-promise": "^4.2.2",
     "serve-favicon": "~2.4.5"
   }
 }
