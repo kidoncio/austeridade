@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 
     // Reddit
     options = {
-        url: 'https://www.reddit.com/r/FreeGamesOnSteam/',
+        url: 'https://www.old.reddit.com/r/FreeGamesOnSteam/',
         method: 'GET'
     };
 
